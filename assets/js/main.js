@@ -297,3 +297,32 @@ document.addEventListener('DOMContentLoaded', () => {
   var year =new Date().getFullYear();
   document.querySelector('#currentYear').innerHTML= year;
 })();
+
+new Swiper('.x-slider', {
+  speed: 600,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 340
+    },
+
+    1200: {
+      slidesPerView: 1,
+    }
+  }
+});
